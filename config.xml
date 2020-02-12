@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widget xmlns="http://www.w3.org/ns/widgets"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        id="com.app2.app"
+        version="1.0"
+        versionCode="14">
+
+
+    <name>app2</name>
+    <author email="" href="">
+         
+    </author>
+
+    <platform name="ios">
+	    <custom-config-file target="*-Info.plist" parent="CFBundleVersion">
+		    <string>1.0</string>
+	    </custom-config-file>
+	    <custom-config-file target="*-Info.plist" parent="CFBundleShortVersionString">
+		    <string>1.0</string>
+	    </custom-config-file>
+	    <custom-config-file target="*-Info.plist" parent="CFBundleIdentifier">
+		    <string>com.app2.app</string>
+	    </custom-config-file>
+	    <custom-config-file target="*-Info.plist" parent="CFBundleDevelopmentRegion">
+		    <string>English</string>
+	    </custom-config-file>
+	    <custom-config-file target="*-Info.plist" parent="NSLocationAlwaysUsageDescription">
+		    <string>We need your location to offer location based services like in-App navigation and finding our service locations around you.</string>
+	    </custom-config-file>
+	    <custom-config-file target="*-Info.plist" parent="NSLocationWhenInUseUsageDescription">
+		    <string>We use your location to navigate you to various places that you might find interesting. You can find different locations throughout the app and let the app navigate you based on your current location!</string>
+	    </custom-config-file>
+	    <custom-config-file target="*-Info.plist" parent="NSCameraUsageDescription">
+		    <string>Access of the camera is required for various features inside the app. This way you can send us photos in the inquiry to help us understand your request better. </string>
+	    </custom-config-file>
+	    <custom-config-file target="*-Info.plist" parent="NSPhotoLibraryUsageDescription">
+		    <string>This app is using your photo library in order to add and send pictures within the app.</string>
+	    </custom-config-file>
+	    <custom-config-file target="*-Info.plist" parent="NSPhotoLibraryAddUsageDescription">
+		    <string>This app requires access to the photo library.</string>
+	    </custom-config-file>
+	    <custom-config-file target="*-Info.plist" parent="ITSAppUsesNonExemptEncryption">
+		    <false/>
+	    </custom-config-file>
+    </platform>
+
+    <platform name="android">
+	    <custom-config-file target="AndroidManifest.xml" parent="/*">
+		    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+	    </custom-config-file>
+    </platform>
+
+    <content src="index.html"/>
+
+    <access origin="*"/>
+    <allow-navigation href="*"/>
+
+    <allow-intent href="http://*/*"/>
+    <allow-intent href="https://*/*"/>
+    <allow-intent href="tel:*"/>
+    <allow-intent href="sms:*"/>
+    <allow-intent href="mailto:*"/>
+    <allow-intent href="geo:*"/>
+    <platform name="android">
+        <allow-intent href="market:*"/>
+
+    </platform>
+    <platform name="ios">
+        <allow-intent href="itms:*"/>
+        <allow-intent href="itms-apps:*"/>
+    </platform>
+
+	<!--    Ionic's core -->
+	<plugin name="cordova-custom-config" spec="5.1.0"/>
+    <plugin name="cordova-plugin-device" spec="2.0.3"/>
+    <plugin name="cordova-plugin-splashscreen" spec="5.0.3"/>
+    <plugin name="cordova-plugin-statusbar" spec="2.4.3"/>
+    <plugin name="cordova-plugin-ionic-keyboard" spec="2.2.0"/>
+    <plugin name="cordova-plugin-ionic-webview" spec="1.2.1"/>
+	<plugin name="cordova-plugin-whitelist" spec="1.3.4"/>
+
+    <!--    AY core -->
+    <plugin name="cordova-plugin-inappbrowser" spec="3.2.0"/>
+    <plugin name="cordova-plugin-network-information" spec="2.0.2"/>
+    <plugin name="cordova-plugin-badge" spec="0.8.8"/>
+    <plugin name="ionic-plugin-deploy" spec="https://github.com/appyourself/ionic-plugin-deploy.git" source="git"/>
+    <plugin name="cordova-sqlite-evcore-extbuild-free" spec="0.10.1"/>
+	<platform name="android">
+	    <plugin name="cordova-plugin-facebook4" spec="6.2.0">
+	        <param name="APP_ID" value="201662473664012"/>
+	        <param name="APP_NAME" value="12345"/>
+	    </plugin>
+	</platform>
+	<platform name="ios">
+		<plugin name="cordova-plugin-facebook4" spec="5.0.0">
+			<param name="APP_ID" value="201662473664012"/>
+			<param name="APP_NAME" value="12345"/>
+		</plugin>
+	</platform>
+
+	<platform name="android">
+		<resource-file src="google-services.json" target="app/google-services.json"/>
+		<plugin name="cordova-android-support-gradle-release" spec="3.0.1">
+			<variable name="ANDROID_SUPPORT_VERSION" value="27.+"/>
+		</plugin>
+		<plugin name="cordova-plugin-jumbomode" spec="1.0.0"/>
+	</platform>
+	<platform name="ios">
+		<plugin name="cordova-plugin-firebasex" spec="7.0.2"/>
+		<preference name="WKWebViewOnly" value="true" />
+		<resource-file src="GoogleService-Info.plist" target="www/GoogleService-Info.plist"/>
+	</platform>
+
+	<!--    when updating this plugin check plugin.xml of cordova-plugin-firebase and cordova-plugin-firebase-crashlytics ANDROID_FIREBASE_CORE_VERSION -->
+	<!--    they need to have the same Firebase libs setup as in Pushwoosh <framework> tag in plugin.xml -->
+	<plugin name="pushwoosh-cordova-plugin" spec="7.18.8"/>
+
+    <!--    additional -->
+	<plugin name="cordova-plugin-screen-orientation" spec="3.0.2"/>
+    <plugin name="cordova-plugin-x-socialsharing" spec="5.6.0"/>
+    <plugin name="cordova-plugin-camera" spec="4.1.0"/>
+    <plugin name="cordova-plugin-geolocation" spec="4.0.2"/>
+
+    <!-- 	PREFERENCES -->
+    <!-- 	Ionic core -->
+    <preference name="webviewbounce" value="false"/>
+    <preference name="UIWebViewBounce" value="false"/>
+    <preference name="DisallowOverscroll" value="true"/>
+    <preference name="android-minSdkVersion" value="23"/>
+    <preference name="android-targetSdkVersion" value="28"/>
+    <preference name="BackupWebStorage" value="none"/>
+    <feature name="StatusBar">
+        <param name="ios-package" onload="true" value="CDVStatusBar"/>
+    </feature>
+    <preference name="CordovaWebViewEngine" value="CDVWKWebViewEngine"/>
+    <feature name="CDVWKWebViewEngine">
+        <param name="ios-package" value="CDVWKWebViewEngine"/>
+    </feature>
+    <!-- 	Phonegap core -->
+    <preference name="orientation" value="default"/>
+    <preference name="prerendered-icon" value="true"/>
+    <!-- 	splashscreen -->
+    <preference name="AutoHideSplashScreen" value="false"/>
+    <preference name="FadeSplashScreen" value="true"/>
+    <preference name="FadeSplashScreenDuration" value="500"/>
+    <preference name="ShowSplashScreenSpinner" value="false"/>
+    <preference name="SplashMaintainAspectRatio" value="true"/>
+    <preference name="SplashShowOnlyFirstTime" value="false"/>
+    <preference name="loadUrlTimeoutValue" value="99999999"/>
+
+
+    <!-- 	ICONS & SPLASHSCREENS -->
+
+    <!-- 	the default icon must be named icon.png and reside in the root folder -->
+    <icon src="icon.png"/>
+    <!-- 	the default splash must be named splash.png and reside in the root folder -->
+    <splash src="splash.png"/>
+    <platform name="android">
+        <!-- 	Android icons -->
+        <icon src="res/icon/android/ldpi.png" platform="android" density="ldpi"/>
+        <icon src="res/icon/android/mdpi.png" platform="android" density="mdpi"/>
+        <icon src="res/icon/android/hdpi.png" platform="android" density="hdpi"/>
+        <icon src="res/icon/android/xhdpi.png" platform="android" density="xhdpi"/>
+        <icon src="res/icon/android/xxhdpi.png" platform="android" density="xxhdpi"/>
+        <icon src="res/icon/android/xxxhdpi.png" platform="android" density="xxxhdpi"/>
+    </platform>
+    <platform name="ios">
+        <!-- 	iOS icons -->
+        <icon src="res/icon/ios/icon.png" platform="ios" width="57" height="57"/>
+        <icon src="res/icon/ios/icon@2x.png" platform="ios" width="114" height="114"/>
+        <icon src="res/icon/ios/icon-40.png" platform="ios" width="40" height="40"/>
+        <icon src="res/icon/ios/icon-40@2x.png" platform="ios" width="80" height="80"/>
+        <icon src="res/icon/ios/icon-60@2x.png" platform="ios" width="120" height="120"/>
+        <icon src="res/icon/ios/icon-50.png" platform="ios" width="50" height="50"/>
+        <icon src="res/icon/ios/icon-50@2x.png" platform="ios" width="100" height="100"/>
+        <icon src="res/icon/ios/icon-60.png" platform="ios" width="60" height="60"/>
+        <icon src="res/icon/ios/icon-40@3x.png" platform="ios" width="120" height="120"/>
+        <icon src="res/icon/ios/icon-60@3x.png" platform="ios" width="180" height="180"/>
+        <icon src="res/icon/ios/icon-72.png" platform="ios" width="72" height="72"/>
+        <icon src="res/icon/ios/icon-72@2x.png" platform="ios" width="144" height="144"/>
+        <icon src="res/icon/ios/icon-76.png" platform="ios" width="76" height="76"/>
+        <icon src="res/icon/ios/icon-76@2x.png" platform="ios" width="152" height="152"/>
+        <icon src="res/icon/ios/icon-835@2x.png" platform="ios" width="167" height="167"/>
+        <icon src="res/icon/ios/icon-small.png" platform="ios" width="29" height="29"/>
+        <icon src="res/icon/ios/icon-small@2x.png" platform="ios" width="58" height="58"/>
+        <icon src="res/icon/ios/icon-small@3x.png" platform="ios" width="87" height="87"/>
+        <icon src="res/icon/ios/icon-1024.png" platform="ios" width="1024" height="1024"/>
+    </platform>
+    <platform name="android">
+        <!-- 	Android splashes -->
+        <splash src="res/screen/android/ldpi.png" platform="android" density="port-ldpi"/>
+        <splash src="res/screen/android/mdpi.png" platform="android" density="port-mdpi"/>
+        <splash src="res/screen/android/hdpi.png" platform="android" density="port-hdpi"/>
+        <splash src="res/screen/android/xhdpi.png" platform="android" density="port-xhdpi"/>
+        <splash src="res/screen/android/ldpi-land.png" platform="android" density="land-ldpi"/>
+        <splash src="res/screen/android/mdpi-land.png" platform="android" density="land-mdpi"/>
+        <splash src="res/screen/android/hdpi-land.png" platform="android" density="land-hdpi"/>
+        <splash src="res/screen/android/xhdpi-land.png" platform="android" density="land-xhdpi"/>
+    </platform>
+    <platform name="ios">
+        <!-- iOS splashes -->
+        <!-- iPhone and iPod touch -->
+        <splash src="res/screen/ios/Default.png" platform="ios" width="320" height="480"/>
+        <splash src="res/screen/ios/Default@2x.png" platform="ios" width="640" height="960"/>
+        <!-- iPhone 5 / iPod Touch (5th Generation) -->
+        <splash src="res/screen/ios/Default-568h@2x.png" platform="ios" width="640" height="1136"/>
+        <!-- iPhone 6 -->
+        <splash src="res/screen/ios/Default-667h@2x.png" platform="ios" width="750" height="1334"/>
+        <splash src="res/screen/ios/Default-736h@3x.png" platform="ios" width="1242" height="2208"/>
+        <!-- iPad -->
+        <splash src="res/screen/ios/Default-Portrait-ipad.png" platform="ios" width="768" height="1024"/>
+        <!-- Retina iPad -->
+        <splash src="res/screen/ios/Default-Portrait@2x-ipad.png" platform="ios" width="1536" height="2048"/>
+        <splash src="res/screen/ios/Default-Portrait@~ipadpro.png" platform="ios" width="2048" height="2732"/>
+        <!-- iPhone X -->
+        <splash src="res/screen/ios/Default-2436h.png" platform="ios" width="1125" height="2436"/>
+        <!-- landscape -->
+        <splash src="res/screen/ios/Default-Landscape-736h.png" platform="ios" width="2208" height="1242"/>
+        <splash src="res/screen/ios/Default-Landscape@2x~ipad.png" platform="ios" width="2048" height="1536"/>
+        <splash src="res/screen/ios/Default-Landscape@~ipadpro.png" platform="ios" width="2732" height="2048"/>
+        <splash src="res/screen/ios/Default-Landscape~ipad.png" platform="ios" width="1024" height="768"/>
+        <splash src="res/screen/ios/Default-Landscape-2436h.png" platform="ios" width="2436" height="1125"/>
+    </platform>
+</widget>

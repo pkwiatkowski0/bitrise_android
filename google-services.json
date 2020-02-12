@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "434665595522",
+    "firebase_url": "https://patrick-s-firebase1.firebaseio.com",
+    "project_id": "patrick-s-firebase1",
+    "storage_bucket": "patrick-s-firebase1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:434665595522:android:e081dba7f8be2584c14a9b",
+        "android_client_info": {
+          "package_name": "com.app2.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "434665595522-rtv1d4g5bok2t3f2t5i42ldd04n6t49d.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCb90TJL2raN0xjLs1C8hw0y6RkFEnLvms"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "434665595522-rtv1d4g5bok2t3f2t5i42ldd04n6t49d.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "434665595522-838riihd9nd6sbdtcvvo4motfp52qr2c.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.app2.app"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

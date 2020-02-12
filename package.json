@@ -1,0 +1,72 @@
+{
+"name": "com.app2.app",
+"displayName": "app2",
+"version": "1.0",
+"description": "app2",
+"main": "index.js",
+"scripts": {},
+"keywords": [
+"ecosystem:cordova"
+],
+"author": "",
+"license": "Apache-2.0",
+"cordova": {
+"plugins": {
+"cordova-custom-config": {},
+"cordova-android-support-gradle-release": {
+"ANDROID_SUPPORT_VERSION": "27.+"
+},
+"cordova-plugin-whitelist": {},
+"cordova-plugin-device": {},
+"cordova-plugin-splashscreen": {},
+"cordova-plugin-statusbar": {},
+"pushwoosh-cordova-plugin": {},
+    "cordova-plugin-facebook4": {
+    "APP_ID": "201662473664012",
+    "APP_NAME": "12345"
+    },
+"cordova-plugin-ionic-keyboard": {},
+"cordova-plugin-ionic-webview": {},
+"cordova-plugin-inappbrowser": {},
+"cordova-plugin-jumbomode": {},
+"cordova-plugin-network-information": {},
+"cordova-plugin-badge": {},
+"ionic-plugin-deploy": {},
+"cordova-sqlite-evcore-extbuild-free": {},
+"cordova-plugin-screen-orientation": {},
+"cordova-plugin-x-socialsharing": {
+"ANDROID_SUPPORT_V4_VERSION": "27.+"
+},
+"cordova-plugin-camera": {
+"ANDROID_SUPPORT_V4_VERSION": "27.+"
+},
+"cordova-plugin-geolocation": {}
+},
+"platforms": [
+"android"
+]
+},
+"dependencies": {
+"cordova-custom-config": "5.1.0",
+"cordova-android-support-gradle-release": "3.0.1",
+"cordova-plugin-badge": "0.8.8",
+"cordova-plugin-camera": "4.1.0",
+"cordova-plugin-device": "2.0.3",
+"pushwoosh-cordova-plugin": "7.18.8",
+    "cordova-plugin-facebook4": "6.0.0",
+"cordova-plugin-geolocation": "4.0.2",
+"cordova-plugin-inappbrowser": "3.2.0",
+"cordova-plugin-ionic-keyboard": "2.2.0",
+"cordova-plugin-ionic-webview": "1.2.1",
+"cordova-plugin-jumbomode": "1.0.0",
+"cordova-plugin-network-information": "2.0.2",
+"cordova-plugin-whitelist": "1.3.4",
+"cordova-plugin-screen-orientation": "3.0.2",
+"cordova-plugin-splashscreen": "5.0.3",
+"cordova-plugin-statusbar": "2.4.3",
+"cordova-plugin-x-socialsharing": "5.6.2",
+"cordova-sqlite-evcore-extbuild-free": "0.10.1",
+"es6-promise-plugin": "4.2.2",
+"ionic-plugin-deploy": "git+https://github.com/appyourself/ionic-plugin-deploy.git"
+}
+}
